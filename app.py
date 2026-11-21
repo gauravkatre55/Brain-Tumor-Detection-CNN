@@ -31,19 +31,21 @@ st.set_page_config(
 
 
 # ============================================================
-# 2. PROFESSIONAL WEBSITE THEME
+# 2. PREMIUM PROFESSIONAL WEBSITE THEME
 # ============================================================
 
 st.markdown("""
 <style>
 
-/* MAIN BACKGROUND */
+/* ==========================================
+   MAIN BACKGROUND
+========================================== */
 
 .stApp {
     background:
         linear-gradient(
-            rgba(239, 248, 243, 0.91),
-            rgba(239, 248, 243, 0.94)
+            rgba(235, 246, 240, 0.88),
+            rgba(235, 246, 240, 0.93)
         ),
         url("https://images.pexels.com/photos/13176356/pexels-photo-13176356.jpeg?auto=compress&cs=tinysrgb&w=2000");
 
@@ -52,7 +54,9 @@ st.markdown("""
     background-attachment: fixed;
 }
 
-/* MAIN LAYOUT */
+/* ==========================================
+   MAIN CONTENT WIDTH
+========================================== */
 
 .block-container {
     max-width: 1250px;
@@ -60,155 +64,271 @@ st.markdown("""
     padding-bottom: 3rem;
 }
 
-/* HEADINGS */
+/* ==========================================
+   GLOBAL TEXT
+========================================== */
+
+.stApp {
+    color: #244b39;
+}
+
+.stApp p,
+.stApp label,
+.stApp li,
+.stApp span {
+    color: #294b3b;
+}
+
+[data-testid="stMarkdownContainer"] {
+    color: #294b3b !important;
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
 
 .stApp h1 {
-    color: #123d2c !important;
+    color: #103d2b !important;
     font-size: 36px !important;
     font-weight: 800 !important;
 }
 
 .stApp h2 {
     color: #174c38 !important;
-    font-size: 26px !important;
+    font-size: 27px !important;
     font-weight: 750 !important;
 }
 
 .stApp h3 {
     color: #216044 !important;
-    font-size: 19px !important;
+    font-size: 20px !important;
     font-weight: 700 !important;
 }
 
 .stApp h4 {
     color: #216044 !important;
+    font-weight: 700 !important;
 }
 
-/* NORMAL TEXT */
+/* ==========================================
+   CAPTIONS
+========================================== */
 
-.stApp p,
-.stApp label,
-.stApp li,
-.stApp [data-testid="stMarkdownContainer"] {
-    color: #294b39 !important;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-/* CAPTIONS */
-
-.stApp [data-testid="stCaptionContainer"] {
+[data-testid="stCaptionContainer"] p {
     color: #587263 !important;
+    font-size: 12px !important;
 }
 
-/* CONTENT CARDS */
+/* ==========================================
+   CONTENT CARDS
+========================================== */
 
 [data-testid="stVerticalBlockBorderWrapper"] {
     background: rgba(255, 255, 255, 0.97) !important;
-    border: 1.5px solid #cfe3d5 !important;
+    border: 1px solid #c9dfd0 !important;
     border-radius: 16px !important;
-    padding: 15px !important;
-    box-shadow: 0 5px 18px rgba(25, 75, 45, 0.08);
+    padding: 16px !important;
+    box-shadow: 0 5px 20px rgba(25, 75, 45, 0.07);
 }
 
-/* BUTTONS */
+/* ==========================================
+   PRIMARY BUTTONS
+========================================== */
 
 .stButton > button {
     background: linear-gradient(
         90deg,
-        #20764b,
-        #38a16c
+        #176b45,
+        #299765
     ) !important;
 
     color: #ffffff !important;
     border: none !important;
     border-radius: 10px !important;
-    height: 48px;
-    font-weight: 750 !important;
+    height: 48px !important;
+    font-weight: 700 !important;
+    transition: 0.3s ease;
+}
+
+.stButton > button p {
+    color: #ffffff !important;
 }
 
 .stButton > button:hover {
-    background: #155b39 !important;
-    color: white !important;
+    background: #105536 !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(23, 107, 69, 0.2);
 }
 
-/* FILE UPLOADER */
+/* ==========================================
+   DOWNLOAD BUTTONS
+========================================== */
+
+.stDownloadButton > button {
+    background: #e8f5ed !important;
+    color: #174c38 !important;
+    border: 1px solid #b9d9c4 !important;
+    border-radius: 9px !important;
+    font-weight: 700 !important;
+}
+
+.stDownloadButton > button p {
+    color: #174c38 !important;
+}
+
+.stDownloadButton > button:hover {
+    background: #d2eadb !important;
+    border-color: #79b18d !important;
+}
+
+/* ==========================================
+   FILE UPLOADER
+========================================== */
 
 [data-testid="stFileUploader"] {
     background: #ffffff !important;
-    border: 1px solid #cfe3d5 !important;
-    border-radius: 13px !important;
-    padding: 14px !important;
+    border: 1px solid #c8dfd0 !important;
+    border-radius: 14px !important;
+    padding: 16px !important;
 }
 
 [data-testid="stFileUploader"] section {
-    background: #f4faf6 !important;
-    border: 1.5px dashed #75a987 !important;
-    border-radius: 10px !important;
+    background: #f2f9f4 !important;
+    border: 2px dashed #78aa89 !important;
+    border-radius: 11px !important;
 }
 
-[data-testid="stFileUploader"] section,
 [data-testid="stFileUploader"] section * {
     color: #244b35 !important;
 }
 
 [data-testid="stFileUploader"] button {
-    background: #278052 !important;
+    background: #24784e !important;
     color: #ffffff !important;
+    border: none !important;
     border-radius: 8px !important;
 }
 
-/* METRICS */
+[data-testid="stFileUploader"] button * {
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   METRIC CARDS
+========================================== */
 
 [data-testid="stMetric"] {
     background: #f0f8f2 !important;
-    border: 1px solid #d5e7da !important;
-    padding: 16px !important;
+    border: 1px solid #cfe4d5 !important;
     border-radius: 13px !important;
+    padding: 16px !important;
 }
 
 [data-testid="stMetricLabel"],
-[data-testid="stMetricValue"] {
+[data-testid="stMetricValue"],
+[data-testid="stMetricDelta"] {
     color: #174c38 !important;
 }
 
-/* ALERTS */
+/* ==========================================
+   ALERTS AND MESSAGES
+========================================== */
 
 [data-testid="stAlert"] {
-    border-radius: 12px !important;
+    background: #edf7f0 !important;
+    border: 1px solid #c5dfcd !important;
+    border-radius: 11px !important;
 }
 
 [data-testid="stAlert"] p {
-    color: #294c37 !important;
-}
-
-/* TABS */
-
-.stTabs [data-baseweb="tab"] {
-    color: #174c38 !important;
-    font-weight: 700;
-}
-
-/* DIVIDERS */
-
-hr {
-    border-color: #d5e7da !important;
-}
-
-/* SIDEBAR */
-
-[data-testid="stSidebar"] {
-    background: #f5faf6 !important;
-}
-
-[data-testid="stSidebar"] * {
     color: #244b35 !important;
 }
 
-/* FOOTER */
+/* ==========================================
+   DATAFRAME / TABLE
+========================================== */
+
+[data-testid="stDataFrame"] {
+    background: #ffffff !important;
+    border: 1px solid #cfe3d5 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+/* ==========================================
+   TABS
+========================================== */
+
+.stTabs [data-baseweb="tab"] {
+    color: #24543c !important;
+    font-weight: 700 !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #176b45 !important;
+    border-bottom-color: #299765 !important;
+}
+
+/* ==========================================
+   INPUT FIELDS
+========================================== */
+
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox [data-baseweb="select"],
+.stTextArea textarea {
+    background: #ffffff !important;
+    color: #174c38 !important;
+    border: 1px solid #c9dfd0 !important;
+    border-radius: 9px !important;
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.stProgress > div > div > div {
+    background-color: #269663 !important;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+[data-testid="stSidebar"] {
+    background: #f5faf6 !important;
+    border-right: 1px solid #d6e7db;
+}
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label {
+    color: #244b35 !important;
+}
+
+/* ==========================================
+   DIVIDERS
+========================================== */
+
+hr {
+    border-color: #d2e5d8 !important;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 footer {
     visibility: hidden;
+}
+
+/* ==========================================
+   REMOVE UNNECESSARY TOP SPACE
+========================================== */
+
+header[data-testid="stHeader"] {
+    background: transparent;
 }
 
 </style>
