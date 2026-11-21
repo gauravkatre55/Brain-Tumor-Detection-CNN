@@ -38,14 +38,14 @@ st.markdown("""
 <style>
 
 /* ==========================================
-   MAIN BACKGROUND
+   1. MAIN BACKGROUND
 ========================================== */
 
 .stApp {
     background:
         linear-gradient(
-            rgba(235, 246, 240, 0.88),
-            rgba(235, 246, 240, 0.93)
+            rgba(240, 248, 243, 0.91),
+            rgba(240, 248, 243, 0.94)
         ),
         url("https://images.pexels.com/photos/13176356/pexels-photo-13176356.jpeg?auto=compress&cs=tinysrgb&w=2000");
 
@@ -55,7 +55,7 @@ st.markdown("""
 }
 
 /* ==========================================
-   MAIN CONTENT WIDTH
+   2. MAIN LAYOUT
 ========================================== */
 
 .block-container {
@@ -65,30 +65,30 @@ st.markdown("""
 }
 
 /* ==========================================
-   GLOBAL TEXT
+   3. GLOBAL TEXT
 ========================================== */
 
 .stApp {
-    color: #244b39;
+    color: #294b3b !important;
 }
 
 .stApp p,
 .stApp label,
-.stApp li,
-.stApp span {
-    color: #294b3b;
+.stApp li {
+    color: #294b3b !important;
+    line-height: 1.7;
 }
 
-[data-testid="stMarkdownContainer"] {
+[data-testid="stMarkdownContainer"] p {
     color: #294b3b !important;
 }
 
 /* ==========================================
-   HEADINGS
+   4. HEADINGS
 ========================================== */
 
 .stApp h1 {
-    color: #103d2b !important;
+    color: #123d2c !important;
     font-size: 36px !important;
     font-weight: 800 !important;
 }
@@ -111,7 +111,7 @@ st.markdown("""
 }
 
 /* ==========================================
-   CAPTIONS
+   5. CAPTIONS
 ========================================== */
 
 [data-testid="stCaptionContainer"] p {
@@ -120,26 +120,26 @@ st.markdown("""
 }
 
 /* ==========================================
-   CONTENT CARDS
+   6. CONTENT CARDS
 ========================================== */
 
 [data-testid="stVerticalBlockBorderWrapper"] {
     background: rgba(255, 255, 255, 0.97) !important;
     border: 1px solid #c9dfd0 !important;
-    border-radius: 16px !important;
+    border-radius: 15px !important;
     padding: 16px !important;
-    box-shadow: 0 5px 20px rgba(25, 75, 45, 0.07);
+    box-shadow: 0 4px 15px rgba(25, 75, 45, 0.06);
 }
 
 /* ==========================================
-   PRIMARY BUTTONS
+   7. PRIMARY BUTTONS
 ========================================== */
 
 .stButton > button {
     background: linear-gradient(
         90deg,
-        #176b45,
-        #299765
+        #238052,
+        #39a875
     ) !important;
 
     color: #ffffff !important;
@@ -147,79 +147,96 @@ st.markdown("""
     border-radius: 10px !important;
     height: 48px !important;
     font-weight: 700 !important;
-    transition: 0.3s ease;
 }
 
-.stButton > button p {
+.stButton > button p,
+.stButton > button span {
     color: #ffffff !important;
 }
 
 .stButton > button:hover {
-    background: #105536 !important;
-    color: #ffffff !important;
+    background: #176b45 !important;
     border: none !important;
-    box-shadow: 0 4px 12px rgba(23, 107, 69, 0.2);
 }
 
 /* ==========================================
-   DOWNLOAD BUTTONS
+   8. DOWNLOAD BUTTONS
 ========================================== */
 
 .stDownloadButton > button {
-    background: #e8f5ed !important;
+    background: #eaf6ee !important;
     color: #174c38 !important;
     border: 1px solid #b9d9c4 !important;
     border-radius: 9px !important;
     font-weight: 700 !important;
 }
 
-.stDownloadButton > button p {
+.stDownloadButton > button p,
+.stDownloadButton > button span {
     color: #174c38 !important;
 }
 
 .stDownloadButton > button:hover {
-    background: #d2eadb !important;
-    border-color: #79b18d !important;
+    background: #d7eddf !important;
 }
 
 /* ==========================================
-   FILE UPLOADER
+   9. FILE UPLOADER
 ========================================== */
 
 [data-testid="stFileUploader"] {
     background: #ffffff !important;
     border: 1px solid #c8dfd0 !important;
     border-radius: 14px !important;
-    padding: 16px !important;
+    padding: 15px !important;
 }
 
+/* Upload drop area */
+
 [data-testid="stFileUploader"] section {
-    background: #f2f9f4 !important;
-    border: 2px dashed #78aa89 !important;
+    background: #f3faf5 !important;
+    border: 2px dashed #83b796 !important;
     border-radius: 11px !important;
 }
 
+/* Upload instructions */
+
+[data-testid="stFileUploader"] section,
 [data-testid="stFileUploader"] section * {
     color: #244b35 !important;
 }
 
+/* Browse button */
+
 [data-testid="stFileUploader"] button {
-    background: #24784e !important;
-    color: #ffffff !important;
-    border: none !important;
+    background: #e4f3e9 !important;
+    color: #174c38 !important;
+    border: 1px solid #9ac7a8 !important;
     border-radius: 8px !important;
 }
 
 [data-testid="stFileUploader"] button * {
-    color: #ffffff !important;
+    color: #174c38 !important;
+}
+
+/* Uploaded file name card */
+
+[data-testid="stFileUploaderFile"] {
+    background: #eaf6ee !important;
+    border: 1px solid #c2dfcb !important;
+    border-radius: 9px !important;
+}
+
+[data-testid="stFileUploaderFile"] * {
+    color: #174c38 !important;
 }
 
 /* ==========================================
-   METRIC CARDS
+   10. METRIC CARDS
 ========================================== */
 
 [data-testid="stMetric"] {
-    background: #f0f8f2 !important;
+    background: #f1f8f3 !important;
     border: 1px solid #cfe4d5 !important;
     border-radius: 13px !important;
     padding: 16px !important;
@@ -232,21 +249,76 @@ st.markdown("""
 }
 
 /* ==========================================
-   ALERTS AND MESSAGES
+   11. SUCCESS MESSAGE
 ========================================== */
 
-[data-testid="stAlert"] {
-    background: #edf7f0 !important;
-    border: 1px solid #c5dfcd !important;
-    border-radius: 11px !important;
+[data-testid="stAlert"]:has([data-testid="stAlertContentSuccess"]) {
+    background: #e9f7ed !important;
+    border: 1.5px solid #9acbaa !important;
+    border-radius: 12px !important;
 }
 
-[data-testid="stAlert"] p {
-    color: #244b35 !important;
+/* Remove dark inner backgrounds */
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentSuccess"]) > div {
+    background: transparent !important;
+}
+
+/* Success text */
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentSuccess"]) p,
+[data-testid="stAlert"]:has([data-testid="stAlertContentSuccess"]) span {
+    color: #205c39 !important;
 }
 
 /* ==========================================
-   DATAFRAME / TABLE
+   12. WARNING MESSAGE
+========================================== */
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) {
+    background: #fff8e8 !important;
+    border: 1.5px solid #e7d49c !important;
+    border-radius: 12px !important;
+}
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) > div {
+    background: transparent !important;
+}
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) p,
+[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) span {
+    color: #72551e !important;
+}
+
+/* ==========================================
+   13. INFO MESSAGE
+========================================== */
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentInfo"]) {
+    background: #edf6ff !important;
+    border: 1.5px solid #b8d5ed !important;
+    border-radius: 12px !important;
+}
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentInfo"]) > div {
+    background: transparent !important;
+}
+
+[data-testid="stAlert"]:has([data-testid="stAlertContentInfo"]) p,
+[data-testid="stAlert"]:has([data-testid="stAlertContentInfo"]) span {
+    color: #245477 !important;
+}
+
+/* ==========================================
+   14. GENERAL ALERT FALLBACK
+========================================== */
+
+[data-testid="stAlert"] {
+    border-radius: 12px !important;
+}
+
+/* ==========================================
+   15. DATA TABLE
 ========================================== */
 
 [data-testid="stDataFrame"] {
@@ -257,7 +329,7 @@ st.markdown("""
 }
 
 /* ==========================================
-   TABS
+   16. TABS
 ========================================== */
 
 .stTabs [data-baseweb="tab"] {
@@ -271,7 +343,7 @@ st.markdown("""
 }
 
 /* ==========================================
-   INPUT FIELDS
+   17. INPUT FIELDS
 ========================================== */
 
 .stTextInput input,
@@ -285,15 +357,15 @@ st.markdown("""
 }
 
 /* ==========================================
-   PROGRESS BAR
+   18. PROGRESS BAR
 ========================================== */
 
 .stProgress > div > div > div {
-    background-color: #269663 !important;
+    background-color: #299765 !important;
 }
 
 /* ==========================================
-   SIDEBAR
+   19. SIDEBAR
 ========================================== */
 
 [data-testid="stSidebar"] {
@@ -302,13 +374,12 @@ st.markdown("""
 }
 
 [data-testid="stSidebar"] p,
-[data-testid="stSidebar"] span,
 [data-testid="stSidebar"] label {
     color: #244b35 !important;
 }
 
 /* ==========================================
-   DIVIDERS
+   20. DIVIDERS
 ========================================== */
 
 hr {
@@ -316,7 +387,7 @@ hr {
 }
 
 /* ==========================================
-   FOOTER
+   21. REMOVE DEFAULT FOOTER
 ========================================== */
 
 footer {
@@ -324,50 +395,15 @@ footer {
 }
 
 /* ==========================================
-   REMOVE UNNECESSARY TOP SPACE
+   22. HEADER
 ========================================== */
 
 header[data-testid="stHeader"] {
-    background: transparent;
-}
-/* FIX SUCCESS, INFO AND WARNING MESSAGE VISIBILITY */
-
-/* Success message */
-[data-testid="stAlert"]:has([data-testid="stAlertContentSuccess"]) {
-    background-color: #e6f6eb !important;
-    border: 1px solid #8ac9a0 !important;
-    color: #174c38 !important;
-}
-
-/* Warning message */
-[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) {
-    background-color: #fff6df !important;
-    border: 1px solid #e8cf83 !important;
-    color: #674b12 !important;
-}
-
-/* Info message */
-[data-testid="stAlert"]:has([data-testid="stAlertContentInfo"]) {
-    background-color: #eaf4ff !important;
-    border: 1px solid #a9cbea !important;
-    color: #17466b !important;
-}
-
-/* Force readable text inside alerts */
-[data-testid="stAlert"] p,
-[data-testid="stAlert"] span,
-[data-testid="stAlert"] div {
-    color: #244b35 !important;
-}
-
-/* Warning text */
-[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) p {
-    color: #674b12 !important;
+    background: transparent !important;
 }
 
 </style>
 """, unsafe_allow_html=True)
-
 
 # ============================================================
 # 3. MODEL CONFIGURATION
