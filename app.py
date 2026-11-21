@@ -1031,9 +1031,7 @@ with about_col2:
         st.write("🧠 TensorFlow / Keras")
 
         st.write("📊 NumPy and Pandas")
-
-        st.write("🖼️ Pillow")
-
+        
         st.write("🌐 Streamlit")
 
         st.write("📈 Matplotlib")
