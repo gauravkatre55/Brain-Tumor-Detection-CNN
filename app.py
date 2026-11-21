@@ -330,6 +330,40 @@ footer {
 header[data-testid="stHeader"] {
     background: transparent;
 }
+/* FIX SUCCESS, INFO AND WARNING MESSAGE VISIBILITY */
+
+/* Success message */
+[data-testid="stAlert"]:has([data-testid="stAlertContentSuccess"]) {
+    background-color: #e6f6eb !important;
+    border: 1px solid #8ac9a0 !important;
+    color: #174c38 !important;
+}
+
+/* Warning message */
+[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) {
+    background-color: #fff6df !important;
+    border: 1px solid #e8cf83 !important;
+    color: #674b12 !important;
+}
+
+/* Info message */
+[data-testid="stAlert"]:has([data-testid="stAlertContentInfo"]) {
+    background-color: #eaf4ff !important;
+    border: 1px solid #a9cbea !important;
+    color: #17466b !important;
+}
+
+/* Force readable text inside alerts */
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] span,
+[data-testid="stAlert"] div {
+    color: #244b35 !important;
+}
+
+/* Warning text */
+[data-testid="stAlert"]:has([data-testid="stAlertContentWarning"]) p {
+    color: #674b12 !important;
+}
 
 </style>
 """, unsafe_allow_html=True)
