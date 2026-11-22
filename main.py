@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from PIL import Image
 
 import tensorflow as tf
 
@@ -54,9 +55,43 @@ test_ds=keras.utils.image_dataset_from_directory(
     shuffle=False
 )
 
+import matplotlib.pyplot as plt
+import random
+
+train_dir = os.path.join(path, "Training")
+
+class_name = "glioma"
+
+class_path = os.path.join(train_dir, class_name)
+
+images = os.listdir(class_path)
+
+sample_images = random.sample(images, 8)
+
+plt.figure(figsize=(14, 8))
+
+for i, image_name in enumerate(sample_images):
+
+    image_path = os.path.join(class_path, image_name)
+
+    image = Image.open(image_path)
+
+    plt.subplot(2, 4, i + 1)
+    plt.imshow(image)
+    plt.title(class_name)
+    plt.axis("off")
+
+plt.tight_layout()
+plt.show()
+
 # Normalize the pixel values to the range [0, 1]
 def normalize(image, label):
     image=tf.cast(image, tf.float32) / 255.0
+    # Convert RGB images into grayscale
+    image = tf.image.rgb_to_grayscale(image)
+
+    # Convert grayscale back to 3 channels
+    image = tf.image.grayscale_to_rgb(image)
     return image, label
 train_ds=train_ds.map(normalize)
 test_ds=test_ds.map(normalize)
